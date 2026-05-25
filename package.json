@@ -1,0 +1,23 @@
+{
+  "name": "ice-cream-motion",
+  "version": "1.0.0",
+  "description": "Ice Cream Motion Graphic Ad built with Remotion",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx remotion studio",
+    "render": "npx remotion render IceCreamAd out/ice-cream-ad.mp4",
+    "build": "npx remotion render IceCreamAd out/ice-cream-ad.mp4"
+  },
+  "dependencies": {
+    "remotion": "^4.0.238",
+    "@remotion/cli": "^4.0.238",
+    "@remotion/renderer": "^4.0.238",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

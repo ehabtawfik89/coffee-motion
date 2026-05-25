@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "esnext"],
+    "target": "ES2017",
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
