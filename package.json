@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "npx remotion studio",
-    "render": "npx remotion render ZenithrAd out/zenithr-ad.mp4",
-    "build": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --log=verbose"
+    "render": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing",
+    "build": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing --log=verbose"
   },
   "dependencies": {
     "remotion": "^4.0.238",
