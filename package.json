@@ -1,12 +1,12 @@
 {
-  "name": "ice-cream-motion",
+  "name": "zenithr-motion",
   "version": "1.0.0",
-  "description": "Ice Cream Motion Graphic Ad built with Remotion",
+  "description": "Zenithr Employee Experience Platform — 45s SaaS explainer in Remotion",
   "main": "src/index.ts",
   "scripts": {
     "start": "npx remotion studio",
-    "render": "npx remotion render IceCreamAd out/ice-cream-ad.mp4",
-    "build": "npx remotion render IceCreamAd out/ice-cream-ad.mp4"
+    "render": "npx remotion render ZenithrAd out/zenithr-ad.mp4",
+    "build": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --log=verbose"
   },
   "dependencies": {
     "remotion": "^4.0.238",
