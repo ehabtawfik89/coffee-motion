@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx remotion studio",
     "render": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing",
-    "build": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing --log=verbose"
+    "build": "npx remotion render ZenithrAd out/zenithr-ad.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing --log=verbose",
+    "render:bg": "npx remotion render PremiumBlueBg out/premium-blue-bg.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing",
+    "build:bg": "npx remotion render PremiumBlueBg out/premium-blue-bg.mp4 --browser-executable=/opt/pw-browsers/chromium-1194/chrome-linux/chrome --chrome-mode=chrome-for-testing --log=verbose"
   },
   "dependencies": {
     "remotion": "^4.0.238",
