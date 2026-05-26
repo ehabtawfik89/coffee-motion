@@ -25,20 +25,20 @@ export const PremiumBlueBg: React.FC = () => {
   // ── Timing ────────────────────────────────────────────────────────────────
   const t = frame / durationInFrames; // 0 → 1 over the clip
 
-  // Primary breath: one full sine cycle.  Starts at min, rises, returns.
-  const breathe = (Math.sin(t * Math.PI * 2 - Math.PI / 2) + 1) / 2;
+  // Primary breath: 3 full sine cycles (3× original speed).
+  const breathe = (Math.sin(t * Math.PI * 6 - Math.PI / 2) + 1) / 2;
 
-  // Atmospheric shimmer at a slightly different frequency (1.3×) + phase offset
-  const shimmer = (Math.sin(t * Math.PI * 2 * 1.3 + 0.9) + 1) / 2;
+  // Atmospheric shimmer — 3× speed, same 1.3 relative offset
+  const shimmer = (Math.sin(t * Math.PI * 7.8 + 0.9) + 1) / 2;
 
   // ── Grain seed ────────────────────────────────────────────────────────────
-  // Change every 3 frames → ~10 fps grain flicker, visible but not jarring
-  const gs = Math.floor(frame / 3);
+  // Change every frame → 30 fps grain flicker (3× original)
+  const gs = frame;
 
   // ── Sphere drift ─────────────────────────────────────────────────────────
-  // Imperceptible movement — max ±1.4 % horizontal, ±0.8 % vertical
-  const cx = 50 + Math.sin(t * Math.PI * 0.85) * 1.4;        // % x
-  const cy = 116 + Math.sin(t * Math.PI * 0.62 + 0.7) * 0.8; // % y — below frame
+  // 3× faster sway, slightly wider amplitude so fast motion reads clearly
+  const cx = 50 + Math.sin(t * Math.PI * 2.55) * 2.2;         // % x
+  const cy = 116 + Math.sin(t * Math.PI * 1.86 + 0.7) * 1.4;  // % y — below frame
 
   // ── Opacity drivers ───────────────────────────────────────────────────────
   const coreOp = interpolate(breathe, [0, 1], [0.86, 1.00]);   // body glow
@@ -129,7 +129,7 @@ export const PremiumBlueBg: React.FC = () => {
       <div style={{
         position: 'absolute', inset: 0,
         background: `radial-gradient(
-          ellipse 40% 28% at ${cx - 12 + Math.sin(t * Math.PI * 1.7) * 6}% ${cy - 35}%,
+          ellipse 40% 28% at ${cx - 12 + Math.sin(t * Math.PI * 5.1) * 6}% ${cy - 35}%,
           rgba(190, 228, 255, ${0.10 * coreOp * shimmer}) 0%,
           rgba(130, 190, 255, ${0.06 * coreOp * shimmer}) 40%,
           transparent 100%
