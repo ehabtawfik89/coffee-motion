@@ -20,7 +20,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="LossDayCounter"
       component={LossDayCounter}
-      durationInFrames={180}
+      durationInFrames={90}
       fps={30}
       width={1080}
       height={1920}
@@ -29,7 +29,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="MeatGain"
       component={MeatGain}
-      durationInFrames={180}
+      durationInFrames={90}
       fps={30}
       width={1080}
       height={1920}
@@ -38,7 +38,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="MilkYield"
       component={MilkYield}
-      durationInFrames={180}
+      durationInFrames={90}
       fps={30}
       width={1080}
       height={1920}
@@ -47,7 +47,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="MethaneReduced"
       component={MethaneReduced}
-      durationInFrames={180}
+      durationInFrames={90}
       fps={30}
       width={1080}
       height={1920}

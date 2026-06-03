@@ -67,12 +67,12 @@ export const MethaneReduced: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
-  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.1);
-  const numScale = 1 + 0.02 * Math.sin(frame * 0.1);
-  const arrowPulse = 1 + 0.06 * Math.sin(frame * 0.12);
-  const floatY = Math.sin(frame * 0.03) * 12;
+  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.2);
+  const numScale = 1 + 0.02 * Math.sin(frame * 0.2);
+  const arrowPulse = 1 + 0.06 * Math.sin(frame * 0.24);
+  const floatY = Math.sin(frame * 0.06) * 12;
 
-  const entryProgress = spring({ fps, frame, config: { damping: 14, stiffness: 75 }, durationInFrames: 40 });
+  const entryProgress = spring({ fps, frame, config: { damping: 14, stiffness: 120 }, durationInFrames: 20 });
   const entryOpacity = interpolate(entryProgress, [0, 1], [0, 1]);
   const entryScale = interpolate(entryProgress, [0, 1], [0.9, 1]);
 

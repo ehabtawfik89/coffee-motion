@@ -35,19 +35,19 @@ export const MeatGain: React.FC = () => {
   const { fps } = useVideoConfig();
 
   // Steak float + rotate
-  const floatY = Math.sin(frame * 0.04) * 18;
-  const rotateY = Math.sin(frame * 0.025) * 25;
-  const rotateZ = Math.sin(frame * 0.02) * 4;
+  const floatY = Math.sin(frame * 0.08) * 18;
+  const rotateY = Math.sin(frame * 0.05) * 25;
+  const rotateZ = Math.sin(frame * 0.04) * 4;
 
   // Number pulse
-  const numScale = 1 + 0.025 * Math.sin(frame * 0.1);
-  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.1);
+  const numScale = 1 + 0.025 * Math.sin(frame * 0.2);
+  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.2);
 
   // Spotlight drift
-  const spotX = 50 + Math.sin(frame * 0.015) * 6;
+  const spotX = 50 + Math.sin(frame * 0.03) * 6;
 
   // Entry spring
-  const entryProgress = spring({ fps, frame, config: { damping: 14, stiffness: 80 }, durationInFrames: 40 });
+  const entryProgress = spring({ fps, frame, config: { damping: 14, stiffness: 120 }, durationInFrames: 20 });
   const entryY = interpolate(entryProgress, [0, 1], [80, 0]);
   const entryOpacity = interpolate(entryProgress, [0, 1], [0, 1]);
 

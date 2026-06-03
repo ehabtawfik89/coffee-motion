@@ -34,12 +34,12 @@ export const MilkYield: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
-  const floatY = Math.sin(frame * 0.035) * 15;
-  const numScale = 1 + 0.02 * Math.sin(frame * 0.09);
-  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.09);
-  const dropPulse = 1 + 0.04 * Math.sin(frame * 0.07);
+  const floatY = Math.sin(frame * 0.07) * 15;
+  const numScale = 1 + 0.02 * Math.sin(frame * 0.18);
+  const numGlow = 0.7 + 0.3 * Math.sin(frame * 0.18);
+  const dropPulse = 1 + 0.04 * Math.sin(frame * 0.14);
 
-  const entryProgress = spring({ fps, frame, config: { damping: 16, stiffness: 70 }, durationInFrames: 45 });
+  const entryProgress = spring({ fps, frame, config: { damping: 16, stiffness: 120 }, durationInFrames: 20 });
   const entryOpacity = interpolate(entryProgress, [0, 1], [0, 1]);
   const entryScale = interpolate(entryProgress, [0, 1], [0.85, 1]);
 

@@ -41,12 +41,12 @@ export const LossDayCounter: React.FC = () => {
   const { fps } = useVideoConfig();
 
   // Pulsing glow
-  const glowPulse = 0.7 + 0.3 * Math.sin(frame * 0.18);
+  const glowPulse = 0.7 + 0.3 * Math.sin(frame * 0.36);
   // Micro push-in camera
-  const scale = interpolate(frame, [0, 180], [1, 1.04], { extrapolateRight: 'clamp' });
+  const scale = interpolate(frame, [0, 90], [1, 1.04], { extrapolateRight: 'clamp' });
   // Background drift
-  const bgX = Math.sin(frame * 0.015) * 18;
-  const bgY = Math.cos(frame * 0.012) * 12;
+  const bgX = Math.sin(frame * 0.03) * 18;
+  const bgY = Math.cos(frame * 0.024) * 12;
 
   return (
     <div
